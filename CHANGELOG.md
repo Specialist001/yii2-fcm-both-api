@@ -1,7 +1,7 @@
-Yii2 FCM Change Log
+Yii2 FCM with proxy Change Log
 ==========================
 
-Release 26 Oct 2018
+Release 04 Apr 2022
 ------------------------
- - Enh: Release (Anton Khainak)
+ - Release (Bobur Otajonov)
 

@@ -1,12 +1,13 @@
 {
-    "name": "aksafan/yii2-fcm-both-api",
+    "name": "specialist001/yii2-fcm-both-api",
     "description": "Yii2 Extension for sending push notification with both Firebase Cloud Messaging (FCM) HTTP Server Protocols (APIs).",
+    "version": "1.0.0",
     "keywords": ["yii2", "fcm", "push notification", "firebase cloud messaging", "both api", "HTTP v1 API", "Legacy HTTP Server Protocol"],
-    "homepage": "https://github.com/aksafan/yii2-fcm-both-api",
+    "homepage": "https://github.com/Specialist001/yii2-fcm-both-api",
     "type": "yii2-extension",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/aksafan/yii2-fcm-both-api/issues?q=is%3Aopen",
+        "issues": "https://github.com/Specialist001/yii2-fcm-both-api/issues?q=is%3Aopen",
         "forum": "http://www.yiiframework.com/forum/",
         "wiki": "http://www.yiiframework.com/wiki/",
         "irc": "irc://irc.freenode.net/yii",
@@ -14,8 +15,8 @@
     },
     "authors": [
         {
-            "name": "Anton Khainak",
-            "email": "khainak.anton@gmail.com"
+            "name": "Bobur Otajonov",
+            "email": "blackmigma@gmail.com"
         }
     ],
     "minimum-stability": "stable",
@@ -36,7 +37,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "aksafan\\fcm\\": ""
+            "specialist\\fcm\\": ""
         }
     }
 }

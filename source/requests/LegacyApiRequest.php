@@ -39,6 +39,13 @@ class LegacyApiRequest extends AbstractRequest implements Request, GroupManageme
     private $senderId;
 
     /**
+     * @internal
+     *
+     * @var string|null
+    */
+    private $proxyUrl;
+
+    /**
      * @var $optionBuilder MessageOptionsBuilder|TopicSubscriptionOptionsBuilder
      */
     private $optionBuilder;
@@ -53,6 +60,7 @@ class LegacyApiRequest extends AbstractRequest implements Request, GroupManageme
     {
         $this->serverKey = $apiParams['serverKey'];
         $this->senderId = $apiParams['senderId'];
+        $this->proxyUrl = $apiParams['proxyUrl'] ?? null;
         $this->setHttpClient(new Client());
         $this->setReason($reason);
         $this->optionBuilder = StaticBuilderFactory::build($reason, $this);
@@ -328,8 +336,18 @@ class LegacyApiRequest extends AbstractRequest implements Request, GroupManageme
      */
     public function send(): AbstractResponse
     {
+        $requestOptions = $this->getRequestOptions();
+        if ($this->getProxyUrl() !== null) {
+            $requestOptions = array_merge($requestOptions,
+                [
+                    'proxy' => $this->getProxyUrl(),
+                    'timeout'=> 50,
+                    'allow_redirects' => false,
+                ]
+            );
+        }
         try {
-            $responseObject = $this->getHttpClient()->request(self::POST, $this->getUrl(), $this->getRequestOptions());
+            $responseObject = $this->getHttpClient()->request(self::POST, $this->getUrl(), $requestOptions);
         } catch (ClientException $e) {
             \Yii::error(ErrorsHelper::getGuzzleClientExceptionMessage($e), ErrorsHelper::GUZZLE_HTTP_CLIENT);
             $responseObject = $e->getResponse();
@@ -440,6 +458,16 @@ class LegacyApiRequest extends AbstractRequest implements Request, GroupManageme
     private function getSenderId(): string
     {
         return $this->senderId;
+    }
+
+    /**
+     * Gets proxyUrl
+     *
+     * @return string
+     */
+    private function getProxyUrl()
+    {
+        return $this->proxyUrl;
     }
 
     /**

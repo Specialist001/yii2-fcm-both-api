@@ -68,6 +68,7 @@ return [
              'apiParams' => [
                  'serverKey' => 'aef',
                  'senderId' => 'fwef',
+                 'proxyUrl' => 'https://example.com:4345', // optional
              ],
         ],
     ]

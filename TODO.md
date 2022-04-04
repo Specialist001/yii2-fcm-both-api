@@ -1,5 +1,5 @@
-Yii2 FCM TODO list
+Yii2 FCM with proxy TODO list
 ==========================
 
- - Enh: 
+ - Upgrade requires 
 
