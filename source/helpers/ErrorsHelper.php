@@ -1,15 +1,15 @@
 <?php
 
-namespace aksafan\fcm\source\helpers;
+namespace specialist\fcm\source\helpers;
 
-use aksafan\fcm\source\builders\StaticBuilderFactory;
-use aksafan\fcm\source\responses\AbstractResponse;
-use aksafan\fcm\source\responses\TopicSubscribeResponse;
-use aksafan\fcm\source\responses\apiV1\TokenResponse;
-use aksafan\fcm\source\responses\legacyApi\GroupManagementResponse;
-use aksafan\fcm\source\responses\legacyApi\TokenResponse as LegacyTokenResponse;
-use aksafan\fcm\source\responses\legacyApi\TopicResponse as LegacyTopicResponse;
-use aksafan\fcm\source\responses\legacyApi\GroupResponse as LegacyGroupResponse;
+use specialist\fcm\source\builders\StaticBuilderFactory;
+use specialist\fcm\source\responses\AbstractResponse;
+use specialist\fcm\source\responses\TopicSubscribeResponse;
+use specialist\fcm\source\responses\apiV1\TokenResponse;
+use specialist\fcm\source\responses\legacyApi\GroupManagementResponse;
+use specialist\fcm\source\responses\legacyApi\TokenResponse as LegacyTokenResponse;
+use specialist\fcm\source\responses\legacyApi\TopicResponse as LegacyTopicResponse;
+use specialist\fcm\source\responses\legacyApi\GroupResponse as LegacyGroupResponse;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;
 

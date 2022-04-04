@@ -1,6 +1,6 @@
 <?php
 
-namespace aksafan\fcm\source\responses\legacyApi;
+namespace specialist\fcm\source\responses\legacyApi;
 
 /**
  * Interface TokenResponseInterface.

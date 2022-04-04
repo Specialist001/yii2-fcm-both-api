@@ -1,6 +1,6 @@
 <?php
 
-namespace aksafan\fcm\source\builders;
+namespace specialist\fcm\source\builders;
 
 /**
  * Builder for creation of options used by FCM.

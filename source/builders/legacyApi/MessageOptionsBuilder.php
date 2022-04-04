@@ -1,9 +1,9 @@
 <?php
 
-namespace aksafan\fcm\source\builders\legacyApi;
+namespace specialist\fcm\source\builders\legacyApi;
 
-use aksafan\fcm\source\builders\OptionsBuilder;
-use aksafan\fcm\source\helpers\OptionsHelper;
+use specialist\fcm\source\builders\OptionsBuilder;
+use specialist\fcm\source\helpers\OptionsHelper;
 use InvalidArgumentException;
 
 /**

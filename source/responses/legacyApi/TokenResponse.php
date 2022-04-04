@@ -1,9 +1,9 @@
 <?php
 
-namespace aksafan\fcm\source\responses\legacyApi;
+namespace specialist\fcm\source\responses\legacyApi;
 
-use aksafan\fcm\source\builders\legacyApi\MessageOptionsBuilder;
-use aksafan\fcm\source\helpers\ErrorsHelper;
+use specialist\fcm\source\builders\legacyApi\MessageOptionsBuilder;
+use specialist\fcm\source\helpers\ErrorsHelper;
 
 /**
  * Class TokenResponse.

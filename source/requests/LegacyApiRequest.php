@@ -1,15 +1,15 @@
 <?php
 
-namespace aksafan\fcm\source\requests;
+namespace specialist\fcm\source\requests;
 
-use aksafan\fcm\source\builders\GroupManagementOptionsBuilder;
-use aksafan\fcm\source\builders\legacyApi\MessageOptionsBuilder;
-use aksafan\fcm\source\builders\OptionsBuilder;
-use aksafan\fcm\source\builders\StaticBuilderFactory;
-use aksafan\fcm\source\builders\TopicSubscriptionOptionsBuilder;
-use aksafan\fcm\source\helpers\ErrorsHelper;
-use aksafan\fcm\source\responses\AbstractResponse;
-use aksafan\fcm\source\helpers\OptionsHelper;
+use specialist\fcm\source\builders\GroupManagementOptionsBuilder;
+use specialist\fcm\source\builders\legacyApi\MessageOptionsBuilder;
+use specialist\fcm\source\builders\OptionsBuilder;
+use specialist\fcm\source\builders\StaticBuilderFactory;
+use specialist\fcm\source\builders\TopicSubscriptionOptionsBuilder;
+use specialist\fcm\source\helpers\ErrorsHelper;
+use specialist\fcm\source\responses\AbstractResponse;
+use specialist\fcm\source\helpers\OptionsHelper;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Exception\GuzzleException;

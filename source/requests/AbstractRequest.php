@@ -1,8 +1,8 @@
 <?php
 
-namespace aksafan\fcm\source\requests;
+namespace specialist\fcm\source\requests;
 
-use aksafan\fcm\source\responses\AbstractResponse;
+use specialist\fcm\source\responses\AbstractResponse;
 use GuzzleHttp\Client;
 
 /**

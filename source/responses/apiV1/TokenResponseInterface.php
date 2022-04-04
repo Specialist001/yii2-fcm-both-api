@@ -1,6 +1,6 @@
 <?php
 
-namespace aksafan\fcm\source\responses\apiV1;
+namespace specialist\fcm\source\responses\apiV1;
 
 /**
  * Interface TokenResponseInterface.

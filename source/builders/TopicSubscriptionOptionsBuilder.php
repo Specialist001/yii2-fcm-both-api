@@ -1,8 +1,8 @@
 <?php
 
-namespace aksafan\fcm\source\builders;
+namespace specialist\fcm\source\builders;
 
-use aksafan\fcm\source\helpers\OptionsHelper;
+use specialist\fcm\source\helpers\OptionsHelper;
 use InvalidArgumentException;
 
 /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace aksafan\fcm\source\responses;
+namespace specialist\fcm\source\responses;
 
-use aksafan\fcm\source\builders\TopicSubscriptionOptionsBuilder;
-use aksafan\fcm\source\helpers\ErrorsHelper;
+use specialist\fcm\source\builders\TopicSubscriptionOptionsBuilder;
+use specialist\fcm\source\helpers\ErrorsHelper;
 use Psr\Http\Message\ResponseInterface;
 
 /**
