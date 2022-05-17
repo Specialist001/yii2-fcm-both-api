@@ -131,7 +131,7 @@ class MessageOptionsBuilder implements OptionsBuilder
      */
     public function setData(array $data)
     {
-        OptionsHelper::validateData($data);
+        //OptionsHelper::validateData($data);
         $this->data = $data;
     }
 
