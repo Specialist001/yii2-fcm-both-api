@@ -19,13 +19,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 To install, either run
 
 ```
-$ php composer.phar require specialist001/yii2-fcm-both-api
+$ php composer.phar require specialist/yii2-fcm-both-api
 ```
 
 or add
 
 ```
-"specialist001/yii2-fcm-both-api": "*"
+"specialist/yii2-fcm-both-api": "*"
 ```
 
 to the `require` section of your `composer.json` file.
