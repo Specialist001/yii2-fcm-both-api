@@ -261,4 +261,14 @@ class ApiV1Request extends AbstractRequest implements Request
             ],
         ];
     }
+
+    /**
+     * Gets proxyUrl
+     *
+     * @return string
+     */
+    private function getProxyUrl()
+    {
+        return $this->proxyUrl;
+    }
 }
