@@ -1,7 +1,7 @@
 {
     "name": "specialist/yii2-fcm-both-api",
     "description": "Yii2 Extension for sending push notification with both Firebase Cloud Messaging (FCM) HTTP Server Protocols (APIs).",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": ["yii2", "fcm", "push notification", "firebase cloud messaging", "both api", "HTTP v1 API", "Legacy HTTP Server Protocol"],
     "homepage": "https://github.com/Specialist001/yii2-fcm-both-api",
     "type": "yii2-extension",
