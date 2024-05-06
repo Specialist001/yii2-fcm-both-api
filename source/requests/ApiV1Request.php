@@ -23,6 +23,13 @@ class ApiV1Request extends AbstractRequest implements Request
     const FCM_AUTH_URL = 'https://www.googleapis.com/auth/firebase.messaging';
 
     /**
+     * @internal
+     *
+     * @var string|null
+     */
+    private $proxyUrl;
+
+    /**
      * @var $serviceAccount ServiceAccount
      */
     private $serviceAccount;
@@ -43,6 +50,7 @@ class ApiV1Request extends AbstractRequest implements Request
     public function __construct(array $apiParams, string $reason)
     {
         $this->serviceAccount = new ServiceAccount($apiParams['privateKey']);
+        $this->proxyUrl = $apiParams['proxyUrl'] ?? null;
         $this->setHttpClient($this->serviceAccount->authorize(self::FCM_AUTH_URL));
         $this->setReason($reason);
         $this->optionBuilder = StaticBuilderFactory::build($reason, $this);
@@ -149,8 +157,18 @@ class ApiV1Request extends AbstractRequest implements Request
      */
     public function send(): AbstractResponse
     {
+        $requestOptions = $this->getRequestOptions();
+        if ($this->getProxyUrl() !== null) {
+            $requestOptions = array_merge($requestOptions,
+                [
+                    'proxy' => $this->getProxyUrl(),
+                    'timeout'=> 50,
+                    'allow_redirects' => false,
+                ]
+            );
+        }
         try {
-            $responseObject = $this->getHttpClient()->request(self::POST, $this->getUrl(), $this->getRequestOptions());
+            $responseObject = $this->getHttpClient()->request(self::POST, $this->getUrl(), $requestOptions);
         } catch (ClientException $e) {
             \Yii::error(ErrorsHelper::getGuzzleClientExceptionMessage($e), ErrorsHelper::GUZZLE_HTTP_CLIENT);
             $responseObject = $e->getResponse();
